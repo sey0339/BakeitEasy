@@ -1,0 +1,181 @@
+@charset "UTF-8";
+body{background-image:url("../images/bg.jpg");
+background-repeat: no-repeat;
+background-size:100% auto;
+	background-attachment: fixed;
+}
+
+
+header{position:absolute;
+top:0;
+	width: 1262px;
+	margin:0 auto;
+	left:0;
+	right:0;	
+}
+
+img.logo{
+	    margin: 14px auto 17px;
+    display: block;
+	z-index: 8;
+	}		
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+	z-index: 0;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+nav#gnav{
+	position:relative;
+	}
+	
+nav#gnav a img:hover{
+opacity: 0.7;
+filter: opacity(0.7);}
+
+nav#gnav ul{width: 711px;
+display:flex;
+justify-content: space-between;
+margin: 0 auto 0 auto;}
+
+nav#gnav li{
+z-index: 10;
+	}
+
+a.btn3{
+	margin:10 209 auto 0;
+	}
+
+a.btn4{
+	margin:10 209 auto 0;
+	}
+
+a.btn5{
+	margin:0 3px 0 0;
+	}
+
+a.btn6{
+	margin:0 0 0 8px;
+	}
+
+p.txt{
+	text-align: center;
+	color: #330506;
+	margin: 200px 0 20px 0;
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", "Osaka-mono", "monospace";
+}
+p.mail{
+	text-align: center;
+	margin: 35px 0 274px 0;}
+a.mailaddress{
+	background: #073f6a;
+	color: #ffbd0a;
+	font-size: 30px;
+	text-decoration:none;
+	padding: 5px 40px;
+	border-radius: 10px;
+	font-family: "Courier New", Courier, "monospace";
+}
+a.mailaddress:hover{
+	background: #fd6051;
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 33px;
+	transition: all 0.15s;
+}
+
+nav#gnav2 ul
+
+{width: 82px;
+display:flex;
+justify-content: space-between;
+	z-index: 12;
+margin: 0 auto 0 auto;
+	left:0;
+	right:0;
+	bottom: 65px;
+}
+nav#gnav2 a img:hover{
+opacity: 0.7;
+filter: opacity(0.7);}
+
+#container_contact{
+
+	width: 1000px;
+	margin:180px auto 20px auto;
+	padding: 20px 0 0 0;
+}
+
+#container_about{
+	background: rgba(0, 0, 0, 0.3);
+	width: 952px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	display: block;
+	margin: 180px auto 20px auto;
+}
+
+.video_cap{
+padding: 26px;
+}
+img.caption{
+	height: 280px;
+	padding: 26px 0;}
+
+#container{
+	text-align: center;
+	top: 200px;
+}
+nav#products{
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+nav#products a{
+	width: 40px;
+	height: 40px;
+		display:block;
+
+}
+a.bb-custom-icon-first{
+	widows: 40px;
+	height:40px;
+	display: block;
+	background-image: url( "../images/btn05.png")
+}
+
+a.bb-custom-icon-arrow-left{
+	widows: 40px;
+	height:40px;
+	display: block;
+	background-image: url( "../images/btn06.png")
+}
+
+a.bb-custom-icon-arrow-right{
+	widows: 40px;
+	height:40px;
+	display: block;
+	background-image: url( "../images/btn07.png")
+}
+
+a.bb-custom-icon-last{
+	widows: 40px;
+	height:40px;
+	display: block;
+	background-image: url( "../images/btn08.png")
+}

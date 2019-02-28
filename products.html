@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>products</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+<header>
+			<a href="index.html" class="btn"><img src="images/logo.png" alt="logo" class="logo"></a>
+	
+<nav id="gnav">
+<ul>
+<li><a href="about.html" class="btn2"><img src="images/btn02.png" alt="about"></a></li>
+<li><a href="products.html" class="btn3"><img src="images/btn03.png" alt="products"></a></li>
+<li><a href="contact.html" class="btn4"><img src="images/btn04.png" alt="CONTACT"></a></li>
+</ul>
+</nav>
+	</header>
+	
+				<div class="main clearfix">
+				<div class="bb-custom-wrapper">
+					<div id="bb-bookblock" class="bb-bookblock">
+						<div class="bb-item">
+							<img src="images/book.png" alt="image01"/>
+						</div>
+						<div class="bb-item">
+							<img src="images/book1.png" alt="image02"/>
+						</div>
+						<div class="bb-item">
+							<img src="images/book1-1.png" alt="image02"/>
+						</div>
+						<div class="bb-item">
+							<img src="images/book1-2.png" alt="image02"/>
+						</div>
+						<div class="bb-item">
+							<img src="images/book2.png" alt="image03"/>
+						</div>
+						<div class="bb-item">
+							<img src="images/book3.png" alt="image04"/>
+					</div>
+					<nav id="products">
+						<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first"></a>
+						<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left"></a>
+						<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right"></a>
+						<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last"></a>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 800,
+							shadowSides : 0.8,
+							shadowFlip : 0.7
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+	
+</body>
+</html>
